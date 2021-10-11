@@ -1,0 +1,13 @@
+<p #par2>session14 works!</p>
+<div style="background-color: aqua;">
+    <ng-content select=".info"></ng-content>
+</div>
+
+<div style="background-color: rgb(102, 255, 0);">
+    <ng-content select="#success"></ng-content></div>
+
+<div style="background-color: rgb(255, 102, 0);">
+    <ng-content select=".error"></ng-content>
+</div>
+
+<button (click)="onchangeViewChild()">from child change ViewChild</button>
