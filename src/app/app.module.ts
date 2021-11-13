@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +11,36 @@ import { Session15Component } from './session15/session15.component';
 import { Session16Component } from './session16/session16.component';
 import { ColorfulDirective } from './session16/colorful.directive';
 import { AppHighlightDirective } from './session16/apphighlight.directive';
+import { CarouselDirective } from './session16/carousel.directive';
+import { Session17Component } from './session17/session17.component';
+import { UserComponent } from './session17/user/user.component';
+import { UsersComponent } from './session17/users/users.component';
+import { Session18Component } from './session18/session18.component';
+import { User1Component } from './session18/user1/user1.component';
+import { Users1Component } from './session18/users1/users1.component';
+import { MyCompanyService } from './session18/my-company.service';
+import { Session19Component } from './session19/session19.component';
+import { Session20Component } from './session20/session20.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { Session21Component } from './session21/session21.component';
+import { User21Component } from './session21/user21/user21.component';
+import { EditUser21Component } from './session21/edit-user21/edit-user21.component';
+
+export function myCompanyServiceProvider(): MyCompanyService{
+return new MyCompanyService()
+} 
+export const MYCOMPANY_SERVICE_TOKEN = new InjectionToken<MyCompanyService>('MYCOMPANY_SERVICE_TOKEN');
+
+export const USER_AGENT=new InjectionToken<string>('USER_AGENT');
+export const SCREEN_WIDTH=new InjectionToken<string>('SCREEN_WIDTH');
+export const SCREEN_HEIGHT=new InjectionToken<string>('SCREEN_HEIGHT');
+
+export const DEVICE_NAME_TOKEN = new InjectionToken<string>('DEVICE_NAME_TOKEN');
+
+export function deviceNameProvider(userAgent:string, screenwidth:string, screenHeight:string): string{
+  //logic goes here
+ return userAgent+'-*-'+screenwidth+'-*-'+screenHeight;
+}
 
 @NgModule({
   declarations: [
@@ -22,13 +52,44 @@ import { AppHighlightDirective } from './session16/apphighlight.directive';
     Session15Component,
     Session16Component,
     ColorfulDirective,
-    AppHighlightDirective
+    AppHighlightDirective,
+    CarouselDirective,
+    Session17Component,
+    UserComponent,
+    UsersComponent,
+    Session18Component,
+    User1Component,
+    Users1Component,
+    Session19Component,
+    Session20Component,
+    NotfoundComponent,
+    Session21Component,
+    User21Component,
+    EditUser21Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},
+    {provide:MYCOMPANY_SERVICE_TOKEN, useClass:MyCompanyService},
+  
+    {provide: USER_AGENT, useValue: window.navigator.userAgent},
+    {provide: SCREEN_WIDTH, useValue: window.screen.width},
+    {provide: SCREEN_HEIGHT, useValue: window.screen.height},
+
+    {
+      provide: DEVICE_NAME_TOKEN,
+      useFactory: deviceNameProvider,
+      deps:[
+      USER_AGENT,
+      SCREEN_WIDTH,
+      SCREEN_HEIGHT
+     ]
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,14 @@
-<p appApphighlight >session16 works!</p>
+<p [appApphighlight]="'red'" >session16 works!</p>
 
-<input type="text" appColorful style="width:60rem; border-width: .2rem;">
+<input type="text" appColorful style="width:60rem; border-width:.2rem;">
 
+<div *appCarousel="let image from images autoplay 'Yes';let ctrl= controller">
+  <img [src]="image">
+  <button (click)="ctrl.next()">next</button>
+  <button (click)="ctrl.prev()">prev</button>
+</div>
+
+
+<!--<ng-template [appCarousel]>
+    <div></div>
+    </ng-template>-->

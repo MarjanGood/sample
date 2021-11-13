@@ -1,0 +1,10 @@
+<p>user21 works!</p>
+<div>
+    <span>
+        {{user.id + ': '}}
+    </span>
+    <a [routerLink]="['/user21',user.id,'edit']">{{ user.name }}</a>
+<span>{{'---->Email:' + user.email}}</span>
+<button (click)="onEditUser()">Edit User</button>
+
+</div>

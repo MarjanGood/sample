@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Session16Component implements OnInit {
 
+  color='red';
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  images: string[] =[ 'assets/session16/1.jpg','assets/session16/2.jpg','assets/session16/3.jpg'];
+
 
 }
