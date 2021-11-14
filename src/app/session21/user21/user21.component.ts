@@ -9,6 +9,8 @@ import { UserService } from '../user.service';
   styleUrls: ['./user21.component.sass']
 })
 export class User21Component implements OnInit {
+  editMode:boolean= false;
+
 user:any;
   constructor(private route: ActivatedRoute,
               private userService: UserService,
@@ -25,7 +27,7 @@ user:any;
 
 
   public onEditUser(){
-    debugger
+    this.editMode= true;
    this.router.navigate(['/user21', this.user.id,'edit']);
 
   }

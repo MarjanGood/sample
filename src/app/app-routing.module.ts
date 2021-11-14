@@ -16,8 +16,12 @@ const routes: Routes = [
 {path: 'session19', component: Session19Component},
 {path: 'session20/:id', component: Session20Component},
 {path: 'session21', component: Session21Component},
-{path: 'user21/:id', component: User21Component},
-{path: 'user21/:id/edit', component: EditUser21Component},
+{path: 'user21/:id', component: User21Component, children:[
+
+  {path: 'edit', component: EditUser21Component},
+
+]},
+
 {path: 'notFound', component: NotfoundComponent},
 {path: '**', redirectTo:"notFound"}
 ];
