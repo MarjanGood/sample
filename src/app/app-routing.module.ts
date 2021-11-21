@@ -9,6 +9,13 @@ import { Session20Component } from './session20/session20.component';
 import { EditUser21Component } from './session21/edit-user21/edit-user21.component';
 import { Session21Component } from './session21/session21.component';
 import { User21Component } from './session21/user21/user21.component';
+import { AboutComponent } from './session22/about/about.component';
+import { AdminComponent } from './session22/admin/admin.component';
+import { AuthGuard } from './session22/auth.guard';
+import { IndexHomeComponent } from './session22/index-home/index-home.component';
+import { NotAuthorizedComponent } from './session22/not-authorized/not-authorized.component';
+import { Session22Component } from './session22/session22.component';
+import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
 {path: '', component:HomeComponent},
@@ -17,18 +24,23 @@ const routes: Routes = [
 {path: 'session20/:id', component: Session20Component},
 {path: 'session21', component: Session21Component},
 {path: 'user21/:id', component: User21Component, children:[
-
   {path: 'edit', component: EditUser21Component},
-
+]},
+{path: 'session22', component: Session22Component, children:[
+  {path: 'home', component: IndexHomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
+  {path: 'notAuthorized', component: NotAuthorizedComponent},
 ]},
 
+{path: 'virtualKeyboard', component: VirtualKeyboardComponent},
 {path: 'notFound', component: NotfoundComponent},
 {path: '**', redirectTo:"notFound"}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
-    BrowserModule,
+            BrowserModule,
   ],
   exports: [RouterModule]
 })

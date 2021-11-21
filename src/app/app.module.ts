@@ -25,6 +25,14 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { Session21Component } from './session21/session21.component';
 import { User21Component } from './session21/user21/user21.component';
 import { EditUser21Component } from './session21/edit-user21/edit-user21.component';
+import { Session22Component } from './session22/session22.component';
+import { AboutComponent } from './session22/about/about.component';
+import { AdminComponent } from './session22/admin/admin.component';
+import { NotAuthorizedComponent } from './session22/not-authorized/not-authorized.component';
+import { IndexHomeComponent } from './session22/index-home/index-home.component';
+import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
+import { AuthService } from './session22/auth.service';
+
 
 export function myCompanyServiceProvider(): MyCompanyService{
 return new MyCompanyService()
@@ -66,28 +74,36 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Session21Component,
     User21Component,
     EditUser21Component,
+    Session22Component,
+    AboutComponent,
+    AdminComponent,
+    NotAuthorizedComponent,
+    IndexHomeComponent,
+    VirtualKeyboardComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},
-    {provide:MYCOMPANY_SERVICE_TOKEN, useClass:MyCompanyService},
+    // {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},
+    // {provide:MYCOMPANY_SERVICE_TOKEN, useClass:MyCompanyService},
   
-    {provide: USER_AGENT, useValue: window.navigator.userAgent},
-    {provide: SCREEN_WIDTH, useValue: window.screen.width},
-    {provide: SCREEN_HEIGHT, useValue: window.screen.height},
+    // {provide: USER_AGENT, useValue: window.navigator.userAgent},
+    // {provide: SCREEN_WIDTH, useValue: window.screen.width},
+    // {provide: SCREEN_HEIGHT, useValue: window.screen.height},
+    // {
+    //   provide: DEVICE_NAME_TOKEN,
+    //   useFactory: deviceNameProvider,
+    //   deps:[
+    //   USER_AGENT,
+    //   SCREEN_WIDTH,
+    //   SCREEN_HEIGHT
+    //  ]
+    // },
+    AuthService
 
-    {
-      provide: DEVICE_NAME_TOKEN,
-      useFactory: deviceNameProvider,
-      deps:[
-      USER_AGENT,
-      SCREEN_WIDTH,
-      SCREEN_HEIGHT
-     ]
-    }
 
   ],
   bootstrap: [AppComponent]

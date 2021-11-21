@@ -43,14 +43,14 @@ export class AppComponent {
 
 
 
-public log() {
-  console.log(this.loggingService.title);
-  this.loggingService.log("Log from app Component");
-}
+// public log() {
+//   console.log(this.loggingService.title);
+//   this.loggingService.log("Log from app Component");
+// }
 
-public onChange(event: Event) {
-  this.loggingService.title = (event.target as HTMLInputElement).value;
-}
+// public onChange(event: Event) {
+//   this.loggingService.title = (event.target as HTMLInputElement).value;
+// }
 
 
 }

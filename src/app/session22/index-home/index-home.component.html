@@ -1,0 +1,5 @@
+<p>home works!</p> 
+
+<button *ngIf="!isLoggedIn" (click)="loginUser()">Login</button>
+<button *ngIf="isLoggedIn" (click)="logoutUser()">Logout</button>
+{{isLoggedIn}}
