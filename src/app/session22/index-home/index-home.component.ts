@@ -20,12 +20,12 @@ export class IndexHomeComponent implements OnInit {
 
   public loginUser(){
    this.authService.login();
-   this.isLoggedIn = this.authService.loggedIn;
+   this.isLoggedIn = this.authService.checkAuth();
  }
 
   public logoutUser(){
    this.authService.logout();
-   this.isLoggedIn =this.authService.loggedIn;
+   this.isLoggedIn = this.authService.checkAuth();
   }
 
 }

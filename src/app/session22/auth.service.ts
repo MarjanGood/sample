@@ -9,10 +9,7 @@ export class AuthService {
 
   public isAuthenticated() {
     return new Promise((resolve, reject) => {
-
-      debugger
-      console.log(this.loggedIn);
-
+      
       setTimeout(() => {
         resolve(this.loggedIn);
       }, 1000);

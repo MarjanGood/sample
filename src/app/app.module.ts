@@ -89,7 +89,6 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
   providers: [
     // {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},
     // {provide:MYCOMPANY_SERVICE_TOKEN, useClass:MyCompanyService},
-  
     // {provide: USER_AGENT, useValue: window.navigator.userAgent},
     // {provide: SCREEN_WIDTH, useValue: window.screen.width},
     // {provide: SCREEN_HEIGHT, useValue: window.screen.height},
@@ -103,8 +102,6 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     //  ]
     // },
     AuthService
-
-
   ],
   bootstrap: [AppComponent]
 })
