@@ -15,6 +15,13 @@ import { AuthGuard } from './session22/auth.guard';
 import { IndexHomeComponent } from './session22/index-home/index-home.component';
 import { NotAuthorizedComponent } from './session22/not-authorized/not-authorized.component';
 import { Session22Component } from './session22/session22.component';
+import { Auth23Guard } from './session23/auth23.guard';
+import { Home23Component } from './session23/home23/home23.component';
+import { Session23Component } from './session23/session23.component';
+import { DeactivateGuard } from './session24/deactivate.guard';
+import { Home24Component } from './session24/home24/home24.component';
+import { RegisterComponent } from './session24/register/register.component';
+import { Session24Component } from './session24/session24.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
@@ -31,6 +38,16 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'admin', component: AdminComponent, canActivate:[AuthGuard]},
   {path: 'notAuthorized', component: NotAuthorizedComponent},
+]},
+{path: 'session23', component: Session23Component, canActivateChild:[Auth23Guard], children:[
+  {path: 'home23', component: Home23Component},
+]},
+
+{path: 'session24', component: Session24Component, children:[
+
+  {path: 'Home24', component: Home24Component},
+  {path: 'register', component: RegisterComponent, canDeactivate:[DeactivateGuard]},
+ 
 ]},
 
 {path: 'virtualKeyboard', component: VirtualKeyboardComponent},

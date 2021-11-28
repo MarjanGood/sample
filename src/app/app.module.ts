@@ -32,6 +32,11 @@ import { NotAuthorizedComponent } from './session22/not-authorized/not-authorize
 import { IndexHomeComponent } from './session22/index-home/index-home.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 import { AuthService } from './session22/auth.service';
+import { Session23Component } from './session23/session23.component';
+import { Home23Component } from './session23/home23/home23.component';
+import { Session24Component } from './session24/session24.component';
+import { RegisterComponent } from './session24/register/register.component';
+import { Home24Component } from './session24/home24/home24.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -79,7 +84,12 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     AdminComponent,
     NotAuthorizedComponent,
     IndexHomeComponent,
-    VirtualKeyboardComponent
+    VirtualKeyboardComponent,
+    Session23Component,
+    Home23Component,
+    Session24Component,
+    RegisterComponent,
+    Home24Component
     
   ],
   imports: [
@@ -101,7 +111,7 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     //   SCREEN_HEIGHT
     //  ]
     // },
-    AuthService
+  //  AuthService
   ],
   bootstrap: [AppComponent]
 })
