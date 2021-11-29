@@ -11,7 +11,7 @@ import { UserService } from '../user.service';
 export class User21Component implements OnInit {
   editMode:boolean= false;
 
-user:any;
+  user:any;
   constructor(private route: ActivatedRoute,
               private userService: UserService,
               private router: Router) { }
@@ -27,7 +27,7 @@ user:any;
 
 
   public onEditUser(){
-    this.editMode= true;
+   this.editMode= true;
    this.router.navigate(['/user21', this.user.id,'edit']);
 
   }

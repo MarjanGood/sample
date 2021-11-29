@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
         if (authenticated) {
           return true;
         } else {
-          this.router.navigate(['session22/notAuthorized']);
+          this.router.navigate(['/notAuthorized']);
          return false;
         }
       });

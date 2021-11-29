@@ -28,7 +28,6 @@ import { EditUser21Component } from './session21/edit-user21/edit-user21.compone
 import { Session22Component } from './session22/session22.component';
 import { AboutComponent } from './session22/about/about.component';
 import { AdminComponent } from './session22/admin/admin.component';
-import { NotAuthorizedComponent } from './session22/not-authorized/not-authorized.component';
 import { IndexHomeComponent } from './session22/index-home/index-home.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 import { AuthService } from './session22/auth.service';
@@ -41,6 +40,11 @@ import { Session25Component } from './session25/session25.component';
 import { AlbumDetailsComponent } from './session25/album-details/album-details.component';
 import { AlbumsComponent } from './session25/albums/albums.component';
 import { Home25Component } from './session25/home25/home25.component';
+import { Session26Component } from './session26/session26.component';
+import { LimitedAccessComponent } from './limited-access/limited-access.component';
+import { Home26Component } from './session26/home26/home26.component';
+import { Product26Component } from './session26/product26/product26.component';
+import { LoginComponent } from './session26/login/login.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -86,7 +90,6 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Session22Component,
     AboutComponent,
     AdminComponent,
-    NotAuthorizedComponent,
     IndexHomeComponent,
     VirtualKeyboardComponent,
     Session23Component,
@@ -97,8 +100,12 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Session25Component,
     AlbumDetailsComponent,
     AlbumsComponent,
-    Home25Component
-    
+    Home25Component,
+    Session26Component,
+    LimitedAccessComponent,
+    Home26Component,
+    Product26Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
