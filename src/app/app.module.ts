@@ -37,6 +37,10 @@ import { Home23Component } from './session23/home23/home23.component';
 import { Session24Component } from './session24/session24.component';
 import { RegisterComponent } from './session24/register/register.component';
 import { Home24Component } from './session24/home24/home24.component';
+import { Session25Component } from './session25/session25.component';
+import { AlbumDetailsComponent } from './session25/album-details/album-details.component';
+import { AlbumsComponent } from './session25/albums/albums.component';
+import { Home25Component } from './session25/home25/home25.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -89,7 +93,11 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Home23Component,
     Session24Component,
     RegisterComponent,
-    Home24Component
+    Home24Component,
+    Session25Component,
+    AlbumDetailsComponent,
+    AlbumsComponent,
+    Home25Component
     
   ],
   imports: [

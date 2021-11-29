@@ -22,6 +22,11 @@ import { DeactivateGuard } from './session24/deactivate.guard';
 import { Home24Component } from './session24/home24/home24.component';
 import { RegisterComponent } from './session24/register/register.component';
 import { Session24Component } from './session24/session24.component';
+import { AlbumDetailsComponent } from './session25/album-details/album-details.component';
+import { AlbumsComponent } from './session25/albums/albums.component';
+import { Home25Component } from './session25/home25/home25.component';
+import { ResolveGuard } from './session25/resolve.guard';
+import { Session25Component } from './session25/session25.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
@@ -44,15 +49,23 @@ const routes: Routes = [
 ]},
 
 {path: 'session24', component: Session24Component, children:[
-
   {path: 'Home24', component: Home24Component},
   {path: 'register', component: RegisterComponent, canDeactivate:[DeactivateGuard]},
- 
+]},
+
+{path: 'session25', component: Session25Component, children:[
+  {path: 'home25', component: Home25Component},
+  {path: 'albums', component: AlbumsComponent},
+  {path: 'albums/:id', component: AlbumDetailsComponent, 
+   data:{ message: 'this album is heavy' },
+   resolve:{ album: ResolveGuard }
+  },
+
 ]},
 
 {path: 'virtualKeyboard', component: VirtualKeyboardComponent},
-{path: 'notFound', component: NotfoundComponent},
-{path: '**', redirectTo:"notFound"}
+{path: 'notfound', component: NotfoundComponent},
+{path: '**', redirectTo:"notfound"}
 ];
 
 @NgModule({
