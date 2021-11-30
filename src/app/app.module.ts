@@ -45,6 +45,9 @@ import { LimitedAccessComponent } from './limited-access/limited-access.componen
 import { Home26Component } from './session26/home26/home26.component';
 import { Product26Component } from './session26/product26/product26.component';
 import { LoginComponent } from './session26/login/login.component';
+import { Session27Component } from './session27/session27.component';
+import { Home27Component } from './session27/home27/home27.component';
+import { Product27Component } from './session27/product27/product27.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -105,7 +108,10 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     LimitedAccessComponent,
     Home26Component,
     Product26Component,
-    LoginComponent
+    LoginComponent,
+    Session27Component,
+    Home27Component,
+    Product27Component
   ],
   imports: [
     BrowserModule,

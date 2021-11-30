@@ -34,6 +34,9 @@ import { Home26Component } from './session26/home26/home26.component';
 import { LimitedAccessGuard } from './session26/limited-access.guard';
 import { Product26Component } from './session26/product26/product26.component';
 import { Session26Component } from './session26/session26.component';
+import { Home27Component } from './session27/home27/home27.component';
+import { Product27Component } from './session27/product27/product27.component';
+import { Session27Component } from './session27/session27.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
@@ -76,6 +79,13 @@ const routes: Routes = [
   //{path: 'product26', component: Product26Component, canActivate:[Auth26Guard,LimitedAccessGuard,CheckCredentialsGuard]},
   {path: 'product26', component: Product26Component, canActivate:[Auth26Guard], data:{roles:['admin']}},
   {path: 'editProduct26', component: Product26Component, canActivate:[Auth26Guard],data:{roles:['users']}},
+]},
+
+{path: 'session27', component: Session27Component, children:[
+  {path: 'home27', component: Home27Component},
+  {path: 'product27', component: Product27Component},
+
+ 
 ]},
 
 {path: 'virtualKeyboard', component: VirtualKeyboardComponent},
