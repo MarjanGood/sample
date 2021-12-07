@@ -15,7 +15,6 @@ export class VirtualKeyboardComponent implements OnInit {
 
   value = "";
   keyboard: Keyboard;
-
   ngAfterViewInit() {
     this.keyboard = new Keyboard({
       onChange: input => this.onChange(input),
@@ -30,7 +29,6 @@ export class VirtualKeyboardComponent implements OnInit {
 
   onKeyPress = (button: string) => {
     console.log("Button pressed", button);
-
     /**
      * If you want to handle the shift and caps lock buttons
      */

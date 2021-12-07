@@ -48,6 +48,9 @@ import { LoginComponent } from './session26/login/login.component';
 import { Session27Component } from './session27/session27.component';
 import { Home27Component } from './session27/home27/home27.component';
 import { Product27Component } from './session27/product27/product27.component';
+import { Session28Component } from './session28/session28.component';
+import { MultiKeyboardComponent } from './multi-keyboard/multi-keyboard.component';
+import { FormsModule } from '@angular/forms';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -111,11 +114,14 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     LoginComponent,
     Session27Component,
     Home27Component,
-    Product27Component
+    Product27Component,
+    Session28Component,
+    MultiKeyboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     // {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},

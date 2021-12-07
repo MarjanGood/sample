@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { LimitedAccessComponent } from './limited-access/limited-access.component';
+import { MultiKeyboardComponent } from './multi-keyboard/multi-keyboard.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './session12/home/home/home.component';
@@ -37,6 +38,7 @@ import { Session26Component } from './session26/session26.component';
 import { Home27Component } from './session27/home27/home27.component';
 import { Product27Component } from './session27/product27/product27.component';
 import { Session27Component } from './session27/session27.component';
+import { Session28Component } from './session28/session28.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
@@ -84,10 +86,14 @@ const routes: Routes = [
 {path: 'session27', component: Session27Component, children:[
   {path: 'home27', component: Home27Component},
   {path: 'product27', component: Product27Component},
-
- 
 ]},
 
+{path: 'session28', component: Session28Component, children:[
+  // {path: 'home27', component: Home27Component},
+  // {path: 'product27', component: Product27Component},
+]},
+
+{path: 'multiKeyboard', component: MultiKeyboardComponent},
 {path: 'virtualKeyboard', component: VirtualKeyboardComponent},
 {path: 'notAuthorized', component: NotAuthorizedComponent},
 {path: 'limitedAccess', component: LimitedAccessComponent},
