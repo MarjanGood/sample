@@ -1,0 +1,21 @@
+   <div class="form-inline">
+    <div class="input-group flex-fill">
+      <!-- <input nbInput style="max-width: 100% !important;" class="ltr form-control" 
+      [(ngModel)]="password"
+         type="password" 
+        [placeholder]="placeholder" fieldSize="small"
+        value={{value}} 
+        (input)="onInputChange($event)"> -->
+
+      <div class="input-group-append">
+        <button type="button" nbSuffix nbButton ghost (click)="showKeyboard()" class="input-group-btn">
+          <!-- <nb-icon [icon]="'keypad-outline'" pack="eva">
+          </nb-icon> -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div #par style="display:none;" class="simple-keyboard"></div> 
+
+  <!-- <app-password-strength-bar *ngIf="strengthBar" [passwordToCheck]="password" [barLabel]="barLabel"></app-password-strength-bar> -->

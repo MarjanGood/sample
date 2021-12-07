@@ -20,6 +20,8 @@ export class VirtualKeyboardComponent implements OnInit {
       onChange: input => this.onChange(input),
       onKeyPress: (button: string) => this.onKeyPress(button)
     });
+
+   // this.renderer2.removeClass(this.par.nativeElement, 'simple-keyboard');
   }
 
   onChange = (input: string) => {

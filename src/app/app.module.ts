@@ -1,6 +1,6 @@
 import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './session12/home/home/home.component';
@@ -51,6 +51,7 @@ import { Product27Component } from './session27/product27/product27.component';
 import { Session28Component } from './session28/session28.component';
 import { MultiKeyboardComponent } from './multi-keyboard/multi-keyboard.component';
 import { FormsModule } from '@angular/forms';
+import { PasswordStrengthBarComponent } from './virtual-multi-keyboard-comp/password-strength-bar/password-strength-bar.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -116,11 +117,13 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Home27Component,
     Product27Component,
     Session28Component,
-    MultiKeyboardComponent
+    MultiKeyboardComponent,
+    PasswordStrengthBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [

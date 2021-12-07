@@ -27,6 +27,7 @@ export class Session28Component implements OnInit {
       fetch('https://jsonplaceholder.typicode.com/todos')
       .then((response)=>{ return response.json();
        })
+       
       .then((body)=> {
         observer.next(body);
         observer.complete();
