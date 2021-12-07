@@ -68,6 +68,7 @@ export class PasswordStrengthBarComponent implements OnChanges {
     //       this.setBarColors(c.idx, c.col);  
     //   }  
   }  
+  
 
 //   private setBarColors(count, col) {  
 //       for (let _n = 0; _n < count; _n++) {  
