@@ -52,6 +52,8 @@ import { Session28Component } from './session28/session28.component';
 import { MultiKeyboardComponent } from './multi-keyboard/multi-keyboard.component';
 import { FormsModule } from '@angular/forms';
 import { PasswordStrengthBarComponent } from './virtual-multi-keyboard-comp/password-strength-bar/password-strength-bar.component';
+import { Session29Component } from './session29/session29.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -119,12 +121,15 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     Session28Component,
     MultiKeyboardComponent,
     PasswordStrengthBarComponent,
+    Session29Component,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     // {provide:MYCOMPANY_SERVICE_TOKEN, useFactory:myCompanyServiceProvider},

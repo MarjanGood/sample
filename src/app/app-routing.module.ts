@@ -39,6 +39,7 @@ import { Home27Component } from './session27/home27/home27.component';
 import { Product27Component } from './session27/product27/product27.component';
 import { Session27Component } from './session27/session27.component';
 import { Session28Component } from './session28/session28.component';
+import { Session29Component } from './session29/session29.component';
 import { VirtualKeyboardComponent } from './virtual-keyboard/virtual-keyboard.component';
 
 const routes: Routes = [
@@ -92,6 +93,12 @@ const routes: Routes = [
   // {path: 'home27', component: Home27Component},
   // {path: 'product27', component: Product27Component},
 ]},
+
+{path: 'session29', component: Session29Component, children:[
+  // {path: 'home27', component: Home27Component},
+  // {path: 'product27', component: Product27Component},
+]},
+
 
 {path: 'multiKeyboard', component: MultiKeyboardComponent},
 {path: 'virtualKeyboard', component: VirtualKeyboardComponent},
