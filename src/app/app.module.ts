@@ -54,6 +54,7 @@ import { FormsModule } from '@angular/forms';
 import { PasswordStrengthBarComponent } from './virtual-multi-keyboard-comp/password-strength-bar/password-strength-bar.component';
 import { Session29Component } from './session29/session29.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Session30Component } from './session30/session30.component';
 
 
 export function myCompanyServiceProvider(): MyCompanyService{
@@ -122,6 +123,7 @@ export function deviceNameProvider(userAgent:string, screenwidth:string, screenH
     MultiKeyboardComponent,
     PasswordStrengthBarComponent,
     Session29Component,
+    Session30Component,
   
   ],
   imports: [
